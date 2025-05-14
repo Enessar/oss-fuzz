@@ -20,5 +20,6 @@ RUN apt-get update && \
 
 RUN git clone --depth 1 https://github.com/madler/zlib.git
 RUN git clone --branch stable-v1.6.48 --depth 1 https://github.com/enessar/libpng.git
+RUN pip install Pillow
 RUN cp libpng/contrib/oss-fuzz/build.sh $SRC
 WORKDIR libpng
