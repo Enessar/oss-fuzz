@@ -19,7 +19,7 @@ RUN apt-get update && \
     apt-get install -y make autoconf automake libtool zlib1g-dev
 
 RUN git clone --depth 1 https://github.com/madler/zlib.git
-RUN git clone --branch submit_base --depth 1 https://github.com/enessar/libpng.git
+RUN git clone --branch submit_improve1 --depth 1 https://github.com/enessar/libpng.git
 RUN pip install Pillow
 RUN cp libpng/contrib/oss-fuzz/build.sh $SRC
 WORKDIR libpng
